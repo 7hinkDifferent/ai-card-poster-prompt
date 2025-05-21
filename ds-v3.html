@@ -1,0 +1,240 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>AI敏捷开发挑战赛</title>
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700&family=Roboto:wght@300;400&display=swap" rel="stylesheet">
+  <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --gold: #D4AF37;
+      --black: #000000;
+      --cream: #F5F5DC;
+    }
+    body {
+      font-family: 'Roboto', sans-serif;
+      background-color: var(--cream);
+    }
+    .artdeco-border {
+      border: 12px solid var(--gold);
+      border-image: repeating-linear-gradient(45deg, var(--gold), var(--black) 15px, var(--gold) 30px) 20;
+      position: relative;
+    }
+    .artdeco-border::before {
+      content: "";
+      position: absolute;
+      top: -15px; left: -15px; right: -15px; bottom: -15px;
+      border: 3px solid var(--gold);
+      pointer-events: none;
+    }
+    .title-font {
+      font-family: 'Playfair Display', serif;
+      text-shadow: 3px 3px 0px rgba(0,0,0,0.2);
+    }
+    .zigzag {
+      background: linear-gradient(135deg, var(--gold) 25%, transparent 25%) -50px 0,
+                  linear-gradient(225deg, var(--gold) 25%, transparent 25%) -50px 0,
+                  linear-gradient(315deg, var(--gold) 25%, transparent 25%),
+                  linear-gradient(45deg, var(--gold) 25%, transparent 25%);
+      background-size: 100px 100px;
+      height: 30px;
+    }
+    .sunburst {
+      position: relative;
+      overflow: hidden;
+    }
+    .sunburst::before {
+      content: "";
+      position: absolute;
+      top: -50%; left: -50%;
+      width: 200%; height: 200%;
+      background: radial-gradient(circle, var(--gold) 0%, transparent 70%);
+      transform: rotate(45deg);
+      opacity: 0.3;
+    }
+    .diff-add {
+      background-color: rgba(40, 167, 69, 0.1);
+      color: #28a745;
+    }
+    .diff-important {
+      background-color: rgba(255, 193, 7, 0.1);
+      color: #ffc107;
+    }
+    .quote-mark {
+      font-size: 5rem;
+      line-height: 1;
+      color: var(--gold);
+      opacity: 0.3;
+    }
+  </style>
+</head>
+<body class="min-h-screen flex items-center justify-center p-8">
+  <div class="w-full max-w-2xl bg-white artdeco-border shadow-2xl overflow-hidden">
+    <!-- Decorative top elements -->
+    <div class="relative">
+      <div class="zigzag"></div>
+      <div class="sunburst h-16"></div>
+    </div>
+    
+    <!-- Main content -->
+    <div class="p-8">
+      <!-- Date & Tagline -->
+      <div class="flex justify-between items-start mb-6">
+        <div class="bg-black text-gold-100 px-3 py-1 text-xs tracking-widest">
+          2025.05.21
+        </div>
+        <div class="text-right text-sm text-gold-600">
+          <span class="mr-2">⌛ 时间限定</span>
+          <span class="mr-2">🤖 AI协作</span>
+          <span>🏆 极速竞技</span>
+        </div>
+      </div>
+      
+      <!-- Title -->
+      <h1 class="title-font text-4xl md:text-5xl text-center mb-2 text-black">
+        AI敏捷开发挑战赛
+      </h1>
+      <p class="text-center text-gold-600 mb-8">AI-Dev Dash Challenge</p>
+      
+      <!-- Divider -->
+      <div class="flex justify-center mb-8">
+        <div class="h-1 w-24 bg-black"></div>
+        <div class="h-1 w-24 bg-gold-500 mx-2"></div>
+        <div class="h-1 w-24 bg-black"></div>
+      </div>
+      
+      <!-- Core Experience -->
+      <div class="mb-10">
+        <h2 class="text-xl font-bold mb-4 flex items-center border-b border-gold-200 pb-2">
+          <span class="w-8 h-8 bg-black text-gold-100 flex items-center justify-center mr-2">1</span>
+          ▎核心体验
+        </h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-6 mb-6">
+          <!-- Column 1 -->
+          <div class="bg-black bg-opacity-5 p-4 rounded">
+            <h3 class="font-bold mb-2 flex items-center">
+              <i class="fas fa-chess-king text-gold-600 mr-2"></i>
+              双轨难度系统
+            </h3>
+            <ul class="space-y-2 pl-6">
+              <li class="relative before:absolute before:left-0 before:top-0 before:text-gold-600 before:content-['•'] before:-ml-4">
+                <span class="font-medium">𝗘𝗮𝘀𝘆 𝗠𝗼𝗱𝗲：</span>5分钟极简挑战，零门槛入门AI开发
+              </li>
+              <li class="relative before:absolute before:left-0 before:top-0 before:text-gold-600 before:content-['•'] before:-ml-4">
+                <span class="font-medium">𝗛𝗮𝗿𝗱 𝗠𝗼𝗱𝗲：</span>10分钟深度任务，考验逻辑与AI协作能力
+              </li>
+            </ul>
+          </div>
+          
+          <!-- Column 2 -->
+          <div class="bg-black bg-opacity-5 p-4 rounded">
+            <h3 class="font-bold mb-2 flex items-center">
+              <i class="fas fa-brain text-gold-600 mr-2"></i>
+              智能题目工坊
+            </h3>
+            <ul class="space-y-2 pl-6">
+              <li class="relative before:absolute before:left-0 before:top-0 before:text-gold-600 before:content-['•'] before:-ml-4">
+                根据兴趣/专业生成个性化题目
+              </li>
+              <li class="relative before:absolute before:left-0 before:top-0 before:text-gold-600 before:content-['•'] before:-ml-4">
+                实时题库系统避免重复挑战
+              </li>
+            </ul>
+          </div>
+        </div>
+        
+        <!-- Full width block -->
+        <div class="bg-black bg-opacity-5 p-4 rounded">
+          <h3 class="font-bold mb-2 flex items-center">
+            <i class="fas fa-robot text-gold-600 mr-2"></i>
+            未来开发沙盒
+          </h3>
+          <ul class="space-y-2 pl-6">
+            <li class="relative before:absolute before:left-0 before:top-0 before:text-gold-600 before:content-['•'] before:-ml-4">
+              自动化环境配置，专注创意实现
+            </li>
+            <li class="relative before:absolute before:left-0 before:top-0 before:text-gold-600 before:content-['•'] before:-ml-4">
+              动态检查点验证系统
+            </li>
+          </ul>
+        </div>
+      </div>
+      
+      <!-- Glory System -->
+      <div class="mb-10">
+        <h2 class="text-xl font-bold mb-4 flex items-center border-b border-gold-200 pb-2">
+          <span class="w-8 h-8 bg-black text-gold-100 flex items-center justify-center mr-2">2</span>
+          ▎荣耀体系
+        </h2>
+        
+        <div class="bg-black bg-opacity-5 p-4 font-mono rounded">
+          <p class="diff-add mb-2 px-2 py-1 rounded"><span class="font-bold">+</span> 实时全息排行榜</p>
+          <p class="diff-add mb-2 px-2 py-1 rounded"><span class="font-bold">+</span> 限量版数字成就徽章</p>
+          <p class="diff-important px-2 py-1 rounded"><span class="font-bold">!</span> 完成挑战解锁实体盲盒奖励</p>
+        </div>
+      </div>
+      
+      <!-- Quote -->
+      <div class="relative mb-10 px-8">
+        <div class="quote-mark absolute -top-4 left-0">"</div>
+        <p class="text-center italic text-lg relative z-10">
+          这不是普通的编程比赛，而是一场人机协作的极限表演
+        </p>
+        <div class="quote-mark absolute -bottom-8 right-0">"</div>
+      </div>
+      
+      <!-- Participation Guide -->
+      <div class="mb-8">
+        <h2 class="text-xl font-bold mb-4 flex items-center border-b border-gold-200 pb-2">
+          <span class="w-8 h-8 bg-black text-gold-100 flex items-center justify-center mr-2">3</span>
+          ▎参与指南
+        </h2>
+        
+        <div class="grid grid-cols-4 gap-2 text-center">
+          <div class="bg-black text-gold-100 p-2">
+            <div class="text-2xl mb-1">1</div>
+            <div class="text-xs">选择模式</div>
+          </div>
+          <div class="bg-gold-100 p-2">
+            <div class="text-2xl mb-1">2</div>
+            <div class="text-xs">接收任务</div>
+          </div>
+          <div class="bg-black text-gold-100 p-2">
+            <div class="text-2xl mb-1">3</div>
+            <div class="text-xs">协同编程</div>
+          </div>
+          <div class="bg-gold-100 p-2">
+            <div class="text-2xl mb-1">4</div>
+            <div class="text-xs">争夺冠冕</div>
+          </div>
+        </div>
+      </div>
+      
+      <!-- QR Code & CTA -->
+      <div class="flex flex-col md:flex-row items-center justify-between mt-8 pt-6 border-t border-gold-200">
+        <div class="mb-4 md:mb-0">
+          <p class="text-sm italic mb-2">扫描二维码获取参赛密钥</p>
+          <div class="w-24 h-24 bg-gray-200 flex items-center justify-center">
+            <img src="./assets/qrcode_github.com.png" alt="QR Code" class="w-full h-full object-contain">
+          </div>
+        </div>
+        <div class="text-center md:text-right">
+          <button class="bg-black text-gold-100 px-6 py-3 font-bold hover:bg-opacity-90 transition mb-2">
+            <i class="fas fa-crown mr-2"></i>立即报名
+          </button>
+          <p class="text-xs">名额有限，先到先得</p>
+        </div>
+      </div>
+    </div>
+    
+    <!-- Bottom decorative elements -->
+    <div class="relative">
+      <div class="sunburst h-16"></div>
+      <div class="zigzag"></div>
+    </div>
+  </div>
+</body>
+</html>
