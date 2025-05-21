@@ -8,3 +8,5 @@ refer to the following, buy him a coffee
 
 ## steps
 
+1. 修改待处理的内容（日期、主题）
+2. 修改输出要求（二维码、语言、长宽）
