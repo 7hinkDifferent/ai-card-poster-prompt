@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>维多利亚风格知识卡片</title>
+  <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+  <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+  <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+  <style>
+    :root {
+      --victorian-gold: #D4AF37;
+      --victorian-red: #8B0000;
+      --victorian-blue: #1E3A8A;
+      --victorian-cream: #F5F5DC;
+      --victorian-brown: #654321;
+    }
+    
+    body {
+      font-family: 'Noto Serif SC', serif;
+      background-color: var(--victorian-cream);
+      color: var(--victorian-brown);
+    }
+    
+    .victorian-border {
+      border: 12px solid transparent;
+      border-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="none" stroke="%23D4AF37" stroke-width="8"/><path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="%23D4AF37" stroke-width="4"/><path d="M20,20 L80,20 L80,80 L20,80 Z" fill="none" stroke="%23D4AF37" stroke-width="2"/></svg>') 30 round;
+      padding: 2rem;
+      background-color: var(--victorian-cream);
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="100" height="100" viewBox="0 0 100 100"><path d="M0,0 L100,0 L100,100 L0,100 Z" fill="%23F5F5DC"/><path d="M10,10 L90,10 L90,90 L10,90 Z" fill="none" stroke="%23D4AF37" stroke-opacity="0.1" stroke-width="1"/></svg>');
+    }
+    
+    .victorian-title {
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 700;
+      color: var(--victorian-red);
+      text-shadow: 1px 1px 0 var(--victorian-gold);
+      letter-spacing: 1px;
+      border-bottom: 2px solid var(--victorian-gold);
+      padding-bottom: 0.5rem;
+    }
+    
+    .victorian-subtitle {
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 500;
+      color: var(--victorian-blue);
+      font-style: italic;
+    }
+    
+    .victorian-date {
+      font-family: 'Noto Serif SC', serif;
+      font-weight: 500;
+      color: var(--victorian-gold);
+      text-align: right;
+      border-bottom: 1px dotted var(--victorian-gold);
+      padding-bottom: 0.5rem;
+    }
+    
+    .victorian-quote {
+      font-family: 'Noto Serif SC', serif;
+      font-style: italic;
+      color: var(--victorian-blue);
+      border-left: 4px solid var(--victorian-gold);
+      padding-left: 1rem;
+      margin: 1rem 0;
+      background-color: rgba(212, 175, 55, 0.05);
+      padding: 1rem;
+    }
+    
+    .victorian-list {
+      list-style-type: none;
+      padding-left: 0;
+    }
+    
+    .victorian-list li {
+      position: relative;
+      padding-left: 2rem;
+      margin-bottom: 0.5rem;
+    }
+    
+    .victorian-list li:before {
+      content: "❖";
+      color: var(--victorian-gold);
+      position: absolute;
+      left: 0;
+    }
+    
+    .victorian-qrcode {
+      border: 1px solid var(--victorian-gold);
+      padding: 0.5rem;
+      background-color: white;
+      display: inline-block;
+    }
+    
+    .victorian-note {
+      font-family: 'Noto Serif SC', serif;
+      font-size: 0.9rem;
+      color: var(--victorian-brown);
+      background-color: rgba(212, 175, 55, 0.1);
+      border: 1px solid var(--victorian-gold);
+      padding: 1rem;
+      margin-top: 1rem;
+    }
+    
+    .drop-cap {
+      float: left;
+      font-size: 3.5rem;
+      line-height: 2.5rem;
+      padding-top: 0.5rem;
+      padding-right: 0.5rem;
+      font-weight: bold;
+      color: var(--victorian-red);
+    }
+    
+    .corner-decoration {
+      position: absolute;
+      width: 50px;
+      height: 50px;
+      background-image: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" viewBox="0 0 50 50"><path d="M0,0 L50,0 L50,50 L0,50 Z" fill="none" stroke="%23D4AF37" stroke-width="2"/><path d="M10,10 L40,10 L40,40 L10,40 Z" fill="none" stroke="%23D4AF37" stroke-width="1"/><path d="M20,20 L30,20 L30,30 L20,30 Z" fill="none" stroke="%23D4AF37" stroke-width="0.5"/></svg>');
+      background-repeat: no-repeat;
+    }
+    
+    .top-left {
+      top: 0;
+      left: 0;
+    }
+    
+    .top-right {
+      top: 0;
+      right: 0;
+      transform: rotate(90deg);
+    }
+    
+    .bottom-left {
+      bottom: 0;
+      left: 0;
+      transform: rotate(270deg);
+    }
+    
+    .bottom-right {
+      bottom: 0;
+      right: 0;
+      transform: rotate(180deg);
+    }
+  </style>
+</head>
+<body class="p-8 bg-gray-100">
+  <div class="max-w-4xl mx-auto victorian-border relative">
+    <div class="corner-decoration top-left"></div>
+    <div class="corner-decoration top-right"></div>
+    <div class="corner-decoration bottom-left"></div>
+    <div class="corner-decoration bottom-right"></div>
+    
+    <div class="victorian-date">Le 22 Mai 2025</div>
+    
+    <h1 class="victorian-title text-4xl mb-4">时间修补师</h1>
+    <h2 class="victorian-subtitle text-xl mb-6">一个关于时间裂缝的神秘故事</h2>
+    
+    <div class="mb-6">
+      <p><span class="drop-cap">时</span>间裂缝：暴雨夜的茶馆里，苏芮发现茶汤静止不动，周围客人如雕像般凝固，只有柜台后的白发老人仍能活动。</p>
+    </div>
+    
+    <div class="victorian-quote">
+      "时间如瓷器般脆弱，需要有人修补它的裂缝。"<br>
+      — 时间修补师
+    </div>
+    
+    <h3 class="victorian-title text-2xl mt-8 mb-4">故事要点</h3>
+    <ul class="victorian-list">
+      <li><strong>神秘职业</strong>：老人自称"时间修补师"，展示布满裂痕的怀表，解释时间如瓷器会产生裂缝，需要专人修复维持世界运转。</li>
+      <li><strong>异常征兆</strong>：苏芮回忆近期遇到的种种怪事——重复的对话、突然消失的街景、记忆错乱，原来都是时间裂缝的征兆。</li>
+      <li><strong>传承使命</strong>：老人因年迈需要接班人，指出苏芮具有"时感"天赋，能看到常人不可见的时间流动痕迹。</li>
+      <li><strong>命运选择</strong>：当苏芮犹豫时，茶馆突然剧烈震动，更大的时间裂缝正在形成，迫使她必须立即做出决定。</li>
+    </ul>
+    
+    <div class="mt-8 text-center">
+      <div class="victorian-qrcode">
+        <img src="./assets/qrcode_github.com.png" alt="QR Code" width="120">
+        <div class="text-xs mt-1">扫描获取更多故事</div>
+      </div>
+    </div>
+    
+    <div class="victorian-note">
+      <i class="fas fa-quill mr-2"></i> <strong>编辑笔记</strong>：这个故事灵感来源于古老的钟表匠传说和量子物理学中的时间异常理论。维多利亚时期正是钟表工艺达到巅峰的时代，也是人们对时间概念开始深入思考的时期。
+    </div>
+  </div>
+</body>
+</html>

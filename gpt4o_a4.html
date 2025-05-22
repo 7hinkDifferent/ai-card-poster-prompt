@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AI敏捷开发挑战</title>
+    <link href="https://lf3-cdn-tos.bytecdntp.com/cdn/expire-1-M/tailwindcss/2.2.19/tailwind.min.css" rel="stylesheet">
+    <link href="https://lf6-cdn-tos.bytecdntp.com/cdn/expire-100-M/font-awesome/6.0.0/css/all.min.css" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Noto+Serif+SC:wght@400;500;600;700&family=Noto+Sans+SC:wght@300;400;500;700&display=swap" rel="stylesheet">
+    <style>
+        :root {
+            --primary-color: #FF6F61;
+            --secondary-color: #333333;
+            --bg-color: #F9F9F9;
+            --accent-color: #FFD700;
+        }
+
+        body {
+            font-family: 'Noto Sans SC', sans-serif;
+            background-color: var(--bg-color);
+            color: var(--secondary-color);
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background: linear-gradient(to right, var(--primary-color), var(--accent-color));
+            color: white;
+            padding: 2rem 1rem;
+            text-align: center;
+        }
+
+        .header h1 {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 2.5rem;
+            margin: 0;
+        }
+
+        .header p {
+            font-size: 1.2rem;
+            margin-top: 0.5rem;
+        }
+
+        .content {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 1rem;
+            background: white;
+            border-radius: 1rem;
+            box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .section-title {
+            font-family: 'Noto Serif SC', serif;
+            font-size: 1.5rem;
+            margin-bottom: 1rem;
+            color: var(--primary-color);
+        }
+
+        .steps-list {
+            list-style: none;
+            padding: 0;
+            margin: 0;
+        }
+
+        .steps-list li {
+            display: flex;
+            align-items: flex-start;
+            margin-bottom: 1rem;
+        }
+
+        .steps-list i {
+            font-size: 1.5rem;
+            color: var(--primary-color);
+            margin-right: 1rem;
+        }
+
+        .qr-code {
+            display: flex;
+            justify-content: center;
+            margin-top: 2rem;
+        }
+
+        .qr-code img {
+            width: 150px;
+            height: 150px;
+        }
+
+        .footer {
+            text-align: center;
+            margin-top: 2rem;
+            font-size: 0.875rem;
+        }
+    </style>
+</head>
+<body>
+    <header class="header">
+        <h1>AI敏捷开发挑战</h1>
+        <p>2025年3月23日 · 现场编程 · AI助力 · 挑战极限</p>
+    </header>
+
+    <main class="content">
+        <section>
+            <h2 class="section-title">活动简介</h2>
+            <p>根据给定的条件，现场生成编程题目，参与者需使用AI辅助的编程工具，在限定时间内完成一个简单项目的开发，赢取丰厚奖励！</p>
+        </section>
+
+        <section>
+            <h2 class="section-title">挑战步骤</h2>
+            <ul class="steps-list">
+                <li>
+                    <i class="fas fa-flag-checkered"></i>
+                    <div>
+                        <strong>难度选择：</strong>简单或困难，每种难度对应不同的挑战时间和奖励。
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-random"></i>
+                    <div>
+                        <strong>随机题目生成：</strong>根据院系、兴趣等信息生成独特题目，确保每次挑战新鲜感十足。
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-code"></i>
+                    <div>
+                        <strong>编程与开发：</strong>在AI的帮助下完成项目开发，支持ReactJS或NextJS框架。
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-check-circle"></i>
+                    <div>
+                        <strong>验收与奖励：</strong>通过验收即可赢取丰厚奖品，难度越高奖励越大！
+                    </div>
+                </li>
+                <li>
+                    <i class="fas fa-trophy"></i>
+                    <div>
+                        <strong>排行榜展示：</strong>实时查看完成记录，争夺排行榜冠军。
+                    </div>
+                </li>
+            </ul>
+        </section>
+
+        <section class="qr-code">
+            <img src="./assets/qrcode_github.com.png" alt="活动二维码">
+        </section>
+    </main>
+
+    <footer class="footer">
+        <p>主办方：AI敏捷开发团队 · 探索未来编程的无限可能</p>
+    </footer>
+</body>
+</html>
